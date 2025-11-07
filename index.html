@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokukhanya Nkomo - Junior Mayor & Leader</title>
+    <link rel="icon" href="images/ivinah logo.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap'); /* Using Montserrat for a sleek look */
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #E0E0E0; /* Light grey text for contrast */
+            background-color: #000000; /* Solid black background */
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation (Black & Gold) --- */
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #FFD700; /* Gold accent */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .logo img {
+            height: 50px; /* Size of the logo */
+            transition: transform 0.3s ease;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .header nav {
+            display: flex;
+        }
+
+        .header nav a {
+            color: #E0E0E0;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: #FFD700; /* Gold on hover */
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #FFD700; /* Gold for mobile menu icon */
+            font-size: 2em;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        /* --- Hero Section (Side-by-Side - Black/Gold theme) --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 70vh; 
+            background-color: #000000; /* Solid black background */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 5%;
+            box-sizing: border-box;
+        }
+        
+        .hero-image {
+            width: 50%; 
+            height: 100%;
+            /* Using the provided image for Nokukhanya, set against black */
+            background: url('images/khanyoe.jpg') no-repeat left center; 
+            background-size: cover; 
+            background-position: 10% 50%; /* Adjust to ensure face is visible */
+            position: absolute;
+            left: 5%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            width: 45%; 
+            margin-left: 55%; 
+            position: relative; 
+            z-index: 2;
+            color: white;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            color: #FFD700; /* Gold for her name */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: #FFECB3; /* Lighter yellow for titles */
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .hero .council-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #FFD700; /* Gold button */
+            color: #000000; /* Black text on gold button */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero .council-link:hover {
+            background-color: #e6c200; /* Slightly darker gold on hover */
+            transform: translateY(-2px);
+        }
+
+        /* --- Main Content Sections (Black & Gold) --- */
+        .section {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: #000000; /* Ensure sections stay black */
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2); 
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #FFD700; /* Gold for headings */
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #FFD700; /* Gold underline */
+            border-radius: 2px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #A0A0A0; /* Slightly darker grey for body text */
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+        
+        /* List Item Styling for Icons */
+        .section ul li {
+            background-color: rgba(255, 215, 0, 0.08); /* Light gold background for list items */
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: left;
+            border-left: 5px solid #FFD700; /* Gold left border */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Icon Styling */
+        .section ul li strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .icon {
+            margin-right: 8px;
+            font-size: 1.1em;
+            color: #FFD700; /* Gold for icons */
+        }
+
+
+        .section ul li:hover {
+            background-color: rgba(255, 215, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* --- Footer (Built By - Black & Gold) --- */
+        .footer {
+            background-color: #000000;
+            color: #666;
+            padding: 30px 10%;
+            font-size: 0.9em;
+            text-align: center;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .footer a {
+            color: #FFD700; /* Gold links in footer */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social a {
+            color: #B0BEC5; /* Lighter grey for social icons initially */
+            margin: 0 10px;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social a:hover {
+            color: #FFD700; /* Gold on hover for social icons */
+        }
+
+        /* --- Responsive Mobile Styles (Adjusted for Black & Gold) --- */
+        @media (max-width: 900px) {
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .header nav {
+                display: none; 
+                flex-direction: column; 
+                width: 100%;
+                position: absolute;
+                top: 80px; 
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 10px 0;
+                border-top: 1px solid #FFD700;
+            }
+
+            .header nav.open {
+                display: flex; 
+            }
+
+            .header nav a {
+                margin: 10px 0; 
+                padding: 10px 5%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            }
+            
+            /* Hero adjustments for mobile stacking */
+            .hero {
+                flex-direction: column; 
+                height: auto;
+                padding-bottom: 50px;
+                text-align: center;
+            }
+            .hero-image {
+                position: relative;
+                width: 90%;
+                height: 50vh; 
+                left: 5%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-position: center top; /* Center the image for mobile */
+            }
+            .hero-content {
+                width: 90%; 
+                margin: 20px auto 0 auto;
+                text-align: center; 
+                padding-left: 0;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="https://ivinarpark.academy" target="_blank" class="logo">
+            <img src="images/ivinah logo.png" alt="Ivinar Park Academy Logo"> </a>
+        
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+
+        <nav id="main-nav">
+            <a href="#mayor">Junior Mayor Role</a>
+            <a href="#council">Insiza Council</a>
+            <a href="#academy">Academy Roles</a>
+            <a href="#builder">Built By</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="hero-image"></div> 
+        
+        <div class="hero-content">
+            <p>A Dedicated Young Leader</p>
+            <h1>NOKUKHANYA NKOMO</h1>
+            <p>Junior Mayor, Insiza Rural District Council</p>
+            <p>Deputy Head Girl, Ivinar Park Academy</p>
+            <a href="https://insizacouncil.netlify.app" target="_blank" class="council-link">Explore Insiza Council</a>
+        </div>
+    </div>
+
+    <div id="mayor" class="section">
+        <h2>Leadership in Local Governance</h2>
+        <p>
+            Nokukhanya Nkomo serves with distinction as the **Junior Mayor** for the Insiza Rural District Council. Her role is vital in promoting youth participation and ensuring that the voice of young people is integrated into local governance and development planning.
+        </p>
+        <ul>
+            <li><span class="icon">🏛️</span> <strong>Youth Advocacy:</strong> Championing policies that empower local youth and community members.</li>
+            <li><span class="icon">🤝</span> <strong>Civic Engagement:</strong> Organizing and participating in community programs and development initiatives.</li>
+            <li><span class="icon">🗣️</span> <strong>Representation:</strong> Bridging the gap between the council and the younger generation.</li>
+        </ul>
+    </div>
+
+    <div id="council" class="section">
+        <h2>Insiza Rural District Council</h2>
+        <p>
+            The Insiza RDC is committed to sustainable rural development. As Junior Mayor, Nokukhanya collaborates closely with the senior council members to drive progress in infrastructure, education, and community welfare across the district.
+        </p>
+    </div>
+
+    <div id="academy" class="section">
+        <h2>Leadership at Ivinar Park Academy</h2>
+        <p>
+            Nokukhanya demonstrates exceptional leadership not only in her civic role but also within her school community as **Deputy Head Girl**. Her responsibilities reflect her strong commitment to discipline, mentorship, and high standards.
+        </p>
+        <ul>
+            <li><span class="icon">🎓</span> <strong>Deputy Head Girl:</strong> Supporting the Head Girl and staff in maintaining student discipline and school ethos.</li>
+            <li><span class="icon">🌟</span> <strong>Academic Discipline:</strong> Setting a leading example for scholastic achievement and academic excellence.</li>
+            <li><span class="icon">📚</span> <strong>School-Council Liaison:</strong> Representing the academy's interests within the local government structure.</li>
+        </ul>
+    </div>
+
+    <div id="builder" class="footer">
+        <p>&copy; 2025 Nokukhanya Nkomo - Junior Mayor. All Rights Reserved.</p>
+        <p>Ivinar Park Academy: <a href="https://ivinarpark.academy" target="_blank">ivinarpark.academy</a></p>
+        <p style="margin-top: 10px;">**Built with dedication by Hillary Eland**</p>
+        <div class="social">
+            <a href="https://hillaryelandportfolio.netlify.app" target="_blank">Portfolio</a> | 
+            <a href="https://tiktok.com/hillaryeland" target="_blank">TikTok</a> | 
+            <a href="https://facebook.com/hillaryeland" target="_blank">Facebook</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('main-nav');
+            const navLinks = nav.querySelectorAll('a');
+
+            // 1. Toggle the 'open' class on the nav when the button is clicked
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('open');
+            });
+            
+            // 2. Close the menu after a link is clicked (for smoother navigation)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('open')) {
+                        setTimeout(() => {
+                            nav.classList.remove('open');
+                        }, 50); 
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
